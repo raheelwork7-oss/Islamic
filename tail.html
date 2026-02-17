@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dar-ul-Ilm Online Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/logooo.png" type="image/x-icon">
+    <style>
+        .product-view-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.product-view-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Image Section */
+.product-view-image {
+    flex: 1;
+}
+
+.main-img-container {
+    width: 100%;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.main-img-container img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.main-img-container img:hover {
+    transform: scale(1.1);
+}
+
+.small-imgs {
+    display: flex;
+    gap: 15px;
+}
+
+.thumb {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+/* Details Section */
+.product-view-details {
+    flex: 1.2;
+}
+
+.category {
+    color: #C8A951;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.product-view-details h1 {
+    font-size: 36px;
+    color: #05161c;
+    margin: 10px 0;
+    font-family: 'serif';
+}
+
+.view-price {
+    font-size: 28px;
+    color: #C8A951;
+    margin: 20px 0;
+}
+
+.view-price del {
+    color: #888;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.description {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* Buttons and Options */
+.product-options {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.quantity input {
+    width: 60px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.add-to-cart-btn {
+    padding: 12px 25px;
+    background: transparent;
+    border: 2px solid #05161c;
+    color: #05161c;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background: #05161c;
+    color: #fff;
+}
+
+.buy-now-btn {
+    padding: 12px 35px;
+    background: #C8A951;
+    border: 2px solid #C8A951;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-now-btn:hover {
+    background: #05161c;
+    color: #C8A951;
+    border-color: #05161c;
+}
+
+.meta-info p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .product-view-wrapper { flex-direction: column; }
+}
+    </style>
+</head>
+<body>
+    
+    <div class="islamic-cursor">
+    <svg viewBox="0 0 100 100" class="star-icon">
+        <path d="M50 0 L61 39 L100 50 L61 61 L50 100 L39 61 L0 50 L39 39 Z" fill="#C8A951"/>
+    </svg>
+    <div class="cursor-glow"></div>
+</div>
+
+<header>
+    <div class="navbar-area">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logooo.png" alt="Dar-ul-Ilm Logo"></a>
+                </div>
+                
+                <nav>
+                    <ul id="navLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#cate">Categories</a></li>
+                        <li><a href="#new">New Arrivals</a></li>
+                        <li><a href="#bn">About Us</a></li>
+                        <li><a href="#nb">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="product-view-section">
+    <div class="container">
+        <div class="product-view-wrapper">
+            
+            <div class="product-view-image">
+                <div class="main-img-container">
+                    <img src="https://i.pinimg.com/736x/d4/40/1b/d4401bbdda0de9a26ec117df5cedba5f.jpg" alt="Book Detail" id="mainImg">
+                </div>
+            </div>
+
+            <div class="product-view-details">
+                <span class="category">Islamic History</span>
+                <h1>Islamic Manners</h1>
+                
+                <div class="rating">
+                    <span>⭐⭐⭐⭐⭐</span> (120 Customer Reviews)
+                </div>
+
+                <h2 class="view-price">5,500 PKR <del>6,000 PKR</del></h2>
+                
+                <p class="description">
+                   Daily life guidance and manners. This book provides practical advice on Islamic manners and etiquette for everyday life. It covers topics such as greeting others, dining etiquette, social interactions, and personal hygiene, all based on the teachings of Prophet Muhammad ﷺ. Whether you're looking to improve your social skills or seeking to understand the Islamic perspective on manners, this book offers valuable insights and guidance for Muslims of all ages.
+                </p>
+
+                <div class="product-options">
+                    <div class="quantity">
+                        <label>Quantity:</label>
+                        <input type="number" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn">Buy It Now</button>
+                </div>
+
+                <div class="meta-info">
+                    <p><strong>Author:</strong> Safiur Rahman Mubarakpuri</p>
+                    <p><strong>Availability:</strong> In Stock</p>
+                    <p><strong>Shipping:</strong> Worldwide Available</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="./images/logooo.png" alt="Logo" class="footer-logo">
+                <p>Dar-ul-Ilm is your gateway to authentic Islamic knowledge. We provide curated books for seekers of truth worldwide.</p>
+                <div class="social-links">
+                    <a href="#">FB</a>
+                    <a href="#">IG</a>
+                    <a href="#">YT</a>
+                    <a href="#">WA</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Quran & Tafseer</a></li>
+                    <li><a href="#">Hadith Books</a></li>
+                    <li><a href="#">Islamic History</a></li>
+                    <li><a href="#">Kids Collection</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe karein naye arrivals ki update ke liye.</p>
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Your Email">
+                    <button>Go</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Dar-ul-Ilm. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src="app.js"></script>
+</html>

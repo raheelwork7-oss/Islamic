@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dar-ul-Ilm Online Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/logooo.png" type="image/x-icon">
+</head>
+<body>
+
+<div id="loader-wrapper" style="display: none;">
+    <div class="loader-content">
+        <img src="./images/logooo.png" alt="Logo" class="loader-logo">
+        <div class="loader-circle"></div>
+    </div>
+</div>
+
+<div class="islamic-cursor">
+    <svg viewBox="0 0 100 100" class="star-icon">
+        <path d="M50 0 L61 39 L100 50 L61 61 L50 100 L39 61 L0 50 L39 39 Z" fill="#C8A951"/>
+    </svg>
+    <div class="cursor-glow"></div>
+</div>
+
+<header>
+    <div class="navbar-area">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logooo.png" alt="Dar-ul-Ilm Logo"></a>
+                </div>
+                
+                <nav>
+                    <ul id="navLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#cate">Categories</a></li>
+                        <li><a href="#new">New Arrivals</a></li>
+                        <li><a href="#bn">About Us</a></li>
+                        <li><a href="#nb">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-section">
+        <h1>Islamic Books Collection</h1>
+        <p>International Books Selection</p>
+        <button id="button"> <span><a href="shop.html">Shop Now</a></span></button>
+    </div>
+</header>
+
+
+    <section class="cards-section" id="cate">
+    <div class="container">
+        <h2 class="ssection-title">-: Islamic Books Collection :-</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/26/1b/c8/261bc8d44626b1fce7db579430ab0f1c.jpg" alt="Book 1">
+                <div class="card-content">
+                    <h3>Qur'an al-Karim</h3>
+                    <p>Complete guidance for all humanity.</p>
+                    <button class="card-btn"><a href="detail.html">View Details</a></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/35/32/ac/3532ac2511048b2c8d0b21c84ae51186.jpg" alt="Book 1">
+                <div class="card-content">
+                    <h3>Sahih Al-Bukhari</h3>
+                    <p>Authentic sayings of Prophet ﷺ.</p>
+                    <button class="card-btn"><a href="slp.html">View Details</a></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.pinimg.com/1200x/4a/ff/77/4aff77522baa8760af63f4978d2a76ce.jpg" alt="Book 1">
+                <div class="card-content">
+                    <h3>Sahih Muslim</h3>
+                    <p>Trusted collection of authentic Hadith.</p>
+                    <button class="card-btn"><a href="all.html">View Details</a></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/d4/40/1b/d4401bbdda0de9a26ec117df5cedba5f.jpg" alt="Book 1">
+                <div class="card-content">
+                    <h3>Islamic Manners</h3>
+                    <p>Daily life guidance and manners.</p>
+                    <button class="card-btn"><a href="tail.html">View Details</a></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/01/0f/09/010f094cb194bae1ff21beae77b44079.jpg" alt="Book 1">
+                <div class="card-content">
+                    <h3>Ar-Raheeq Al-Makhtum</h3>
+                    <p>Biography of Prophet Muhammad ﷺ.</p>
+                    <button class="card-btn"><a href="ko.html">View Details</a></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/b6/49/d8/b649d86f622f49c63192571f127afc83.jpg" alt="Book 2">
+                <div class="card-content">
+                    <h3>Daily Duas</h3>
+                    <p>Daily duas for protection.</p>
+                    <button class="card-btn"><a href="dew.html">View Details</a></button>
+                </div>
+            </div>
+            </div>
+    </div>
+</section>
+
+
+<section class="new-arrivals" id="new">
+    <div class="container">
+        <h2 class="section-title">-: New Arrivals :-</h2>
+        <div class="special-cards-grid">
+            <div class="special-card">
+                <div class="card-badge">New</div>
+                <div class="img-box">
+                    <img src="https://i.pinimg.com/736x/71/08/fb/7108fbe17a0af3c3b610d20b0a27228f.jpg" alt="New Book">
+                </div>
+                <div class="content-box">
+                    <h3>Al-Ghazali’s Ihya Ulum al-Din</h3>
+                    <p>Guide to heart, soul, and ethics.</p>
+                    <a href="shop.html" class="special-btn">Explore Now</a>
+                </div>
+            </div>
+
+            <div class="special-card">
+                <div class="card-badge">New</div>
+                <div class="img-box">
+                    <img src="https://i.pinimg.com/736x/8e/16/aa/8e16aa087db6dcb4c88d3e431d35ebfd.jpg" alt="New Book">
+                </div>
+                <div class="content-box">
+                    <h3>The Sealed Nectar</h3>
+                    <p>Award-winning life of Prophet ﷺ.</p>
+                    <a href="shop.html" class="special-btn">Explore Now</a>
+                </div>
+            </div>
+
+            <div class="special-card">
+                <div class="card-badge">New</div>
+                <div class="img-box">
+                    <img src="https://i.pinimg.com/736x/50/c3/fb/50c3fb509b1a4fe4ad31f008e14bd591.jpg" alt="New Book">
+                </div>
+                <div class="content-box">
+                    <h3>Purification of Heart</h3>
+                    <p>Cleansing soul from diseases within.</p>
+                    <a href="shop.html" class="special-btn">Explore Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-modern" id="bn">
+    <div class="container">
+        <h2 class="ssection-title">-: About Us :-</h2>
+        <div class="about-grid">
+            <div class="about-text-content">
+                <div class="accent-line"></div>
+                <span class="tagline">Our Legacy</span>
+                <h2>Dedicated to Authentic Islamic Literature</h2>
+                <p>Dar-ul-Ilm stands at the intersection of tradition and modern accessibility. We curate only the most authentic works from renowned scholars to ensure your journey of knowledge is built on a solid foundation.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <h3>5k+</h3>
+                        <p>Books</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>12k+</h3>
+                        <p>Students</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>24/7</h3>
+                        <p>Support</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual-content">
+                <div class="image-stack">
+                    <img src="https://i.pinimg.com/736x/62/12/03/621203a119a1b02a43d3c335dc3b2a01.jpg" alt="Library" class="img-main">
+                    <div class="image-overlay-box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="contact-ultra" id="nb">
+    <div class="container">
+                <h2 class="section-title">-: Contact Us :-</h2>
+        <div class="ultra-grid">
+            
+            <div class="contact-visual">
+                <span class="outline-text">DAR-UL-ILM</span>
+                <h2 class="main-heading">Let's Start a <br><span>Conversation</span></h2>
+                <p>Hamara darwaza har talib-e-ilm ke liye khula hai. Kisi bhi sawal ke liye niche diye gaye raste chunein.</p>
+                <div class="contact-cta">
+                    <a href="mailto:info@darulilm.com" class="cta-mail">info@darulilm.com</a>
+                </div>
+            </div>
+
+            <div class="contact-cards">
+                <div class="glass-card">
+                    <div class="card-icon">01</div>
+                    <div class="card-data">
+                        <h4>Call Us Directly</h4>
+                        <p>+92 300 1234567</p>
+                    </div>
+                </div>
+
+                <div class="glass-card gold-border">
+                    <div class="card-icon">02</div>
+                    <div class="card-data">
+                        <h4>Visit Our Library</h4>
+                        <p>Gulshan-e-Iqbal, Block 13, Karachi</p>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon">03</div>
+                    <div class="card-data">
+                        <h4>Chat on WhatsApp</h4>
+                        <p>Available 24/7 for you</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="./images/logooo.png" alt="Logo" class="footer-logo">
+                <p>Dar-ul-Ilm is your gateway to authentic Islamic knowledge. We provide curated books for seekers of truth worldwide.</p>
+                <div class="social-links">
+                    <a href="#">FB</a>
+                    <a href="#">IG</a>
+                    <a href="#">YT</a>
+                    <a href="#">WA</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Quran & Tafseer</a></li>
+                    <li><a href="#">Hadith Books</a></li>
+                    <li><a href="#">Islamic History</a></li>
+                    <li><a href="#">Kids Collection</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe karein naye arrivals ki update ke liye.</p>
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Your Email">
+                    <button>Go</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Dar-ul-Ilm. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src="app.js"></script>
+</html>

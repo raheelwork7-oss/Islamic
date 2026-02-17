@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dar-ul-Ilm Online Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/logooo.png" type="image/x-icon">
+    <style>
+        /* Shop Hero Banner */
+.shop-hero {
+    background: linear-gradient(rgba(5, 22, 28, 0.8), rgba(5, 22, 28, 0.8)), url('./images/shop-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+    border-bottom: 3px solid #C8A951;
+}
+
+.shop-hero h1 { font-size: 45px; margin-bottom: 10px; font-family: 'serif'; }
+
+/* Layout Grid */
+.shop-wrapper {
+    display: flex;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+/* Sidebar Styling */
+.filter-sidebar {
+    flex: 1;
+    min-width: 250px;
+}
+
+.filter-group { margin-bottom: 40px; }
+.filter-group h3 {
+    font-size: 20px;
+    color: #05161c;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #C8A951;
+    display: inline-block;
+}
+
+.filter-group ul { list-style: none; }
+.filter-group ul li { margin-bottom: 12px; }
+.filter-group ul li a {
+    text-decoration: none;
+    color: #555;
+    transition: 0.3s;
+}
+
+.filter-group ul li a.active, .filter-group ul li a:hover {
+    color: #C8A951;
+    font-weight: bold;
+}
+
+/* Product Cards Grid */
+.product-main { flex: 3; }
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.shop-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+    transition: 0.4s;
+}
+
+.shop-card:hover { transform: translateY(-10px); }
+
+.shop-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.badge {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: #C8A951;
+    color: #05161c;
+    padding: 5px 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.card-info { text-align: center; padding-top: 15px; }
+.card-info h4 { font-size: 18px; color: #05161c; margin-bottom: 10px; }
+
+.price {
+    display: block;
+    color: #C8A951;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.price del { color: #888; font-size: 14px; margin-left: 10px; }
+
+.buy-btn {
+    width: 100%;
+    padding: 12px;
+    background: #05161c;
+    color: #C8A951;
+    border: 1px solid #C8A951;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    background: #C8A951;
+    color: #05161c;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .shop-wrapper { flex-direction: column; }
+}
+
+@media (max-width: 600px) {
+    .product-grid { grid-template-columns: 1fr; }
+}
+    </style>
+</head>
+<body>
+    
+
+<header>
+    <div class="navbar-area">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logooo.png" alt="Dar-ul-Ilm Logo"></a>
+                </div>
+                
+                <nav>
+                    <ul id="navLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#cate">Categories</a></li>
+                        <li><a href="#new">New Arrivals</a></li>
+                        <li><a href="#bn">About Us</a></li>
+                        <li><a href="#nb">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="islamic-cursor">
+    <svg viewBox="0 0 100 100" class="star-icon">
+        <path d="M50 0 L61 39 L100 50 L61 61 L50 100 L39 61 L0 50 L39 39 Z" fill="#C8A951"/>
+    </svg>
+    <div class="cursor-glow"></div>
+</div>
+
+<section class="shop-content">
+    <div class="container">
+        <div class="shop-wrapper">
+            
+            <aside class="filter-sidebar">
+                <div class="filter-group">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#" class="active">All Books</a></li>
+                        <li><a href="#">Quran & Tafseer</a></li>
+                        <li><a href="#">Hadith Sharif</a></li>
+                        <li><a href="#">Islamic History</a></li>
+                        <li><a href="#">Kids Corner</a></li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <!-- <input type="range" class="slider" min="0" max="10000"> -->
+                    <div class="price-labels">
+                        <span>0 PKR</span>
+                        <span>5,000 PKR</span>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="product-main">
+                <div class="product-grid">
+                    <div class="shop-card">
+                        <div class="badge">Sale</div>
+                        <img src="https://i.pinimg.com/736x/71/08/fb/7108fbe17a0af3c3b610d20b0a27228f.jpg" alt="Book Title">
+                        <div class="card-info">
+                            <h4>Al-Ghazali’s Ihya Ulum al-Din</h4>
+                            <span class="price">2,400 PKR <del>4,400 PKR</del></span>
+                            <button class="buy-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="shop-card">
+                        <div class="badge">Sale</div>
+                        <img src="https://i.pinimg.com/736x/8e/16/aa/8e16aa087db6dcb4c88d3e431d35ebfd.jpg" alt="Book Title">
+                        <div class="card-info">
+                            <h4>The Sealed Nectar</h4>
+                            <span class="price">3,500 PKR <del>5,000 PKR</del></span>
+                            <button class="buy-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="shop-card">
+                        <div class="badge">Sale</div>
+                        <img src="https://i.pinimg.com/736x/50/c3/fb/50c3fb509b1a4fe4ad31f008e14bd591.jpg" alt="Book Title">
+                        <div class="card-info">
+                            <h4>Purification of Heart</h4>
+                            <span class="price">3,500 PKR <del>4,000 PKR</del></span>
+                            <button class="buy-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    </div>
+            </main>
+
+        </div>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="./images/logooo.png" alt="Logo" class="footer-logo">
+                <p>Dar-ul-Ilm is your gateway to authentic Islamic knowledge. We provide curated books for seekers of truth worldwide.</p>
+                <div class="social-links">
+                    <a href="#">FB</a>
+                    <a href="#">IG</a>
+                    <a href="#">YT</a>
+                    <a href="#">WA</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Quran & Tafseer</a></li>
+                    <li><a href="#">Hadith Books</a></li>
+                    <li><a href="#">Islamic History</a></li>
+                    <li><a href="#">Kids Collection</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe karein naye arrivals ki update ke liye.</p>
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Your Email">
+                    <button>Go</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Dar-ul-Ilm. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src="app.js"></script>
+</html>
